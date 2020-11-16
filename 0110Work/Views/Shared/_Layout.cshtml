@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+    <meta name="renderer" content="ie-comp">
+    <meta name="renderer" content="ie-stand">
+    <meta name="renderer" content="webkit">
+
+
+    <title>@ViewBag.Title - SOSO部落格</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/Sidebar")
+    @Styles.Render("~/Content/MyCss")
+    @RenderSection("css", required: false)
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--Sidebar顯示區域-->
+    <div id="st-container" class="st-container">
+
+        <!------------------SideBar--------------------->
+        <nav class="st-menu st-effect-1" id="menu-1" style="z-index:1001;">
+
+            <div class="my-3">
+                <a href="@Url.RouteUrl("Homepage")">
+                    <img src="/Images/logo.png" title="SOSO部落格" alt="SOSO部落格" width="250" />
+                </a>
+            </div>
+
+            <ul>
+                <li>
+                    <a class="sid-link-icon" href="#" title="Facebook粉絲專頁" target="_blank">
+                        <span>
+                            <i class="fa fa-facebook-square"></i>
+                        </span>
+                    </a>
+                    <a class="sid-link-icon" href="#" title="instagram" target="_blank">
+                        <span>
+                            <i class="fa fa-instagram"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="st-menu-link" href="@Url.RouteUrl("ArticleList")" title="文章列表">
+                        文章列表
+                        <br />
+                        Article list
+                    </a>
+                </li>
+                @*<li>
+                    <a class="st-menu-link" href="@Url.RouteUrl("GGGGG")" title="SOSO照片集">
+                        SOSO照片集
+                        <br />
+                        Photo album
+                    </a>
+                </li>*@
+                <li>
+                    <a class="st-menu-link st-menu-dropdown" href="javascript:;" title="關於SOSO">
+                        關於SOSO
+                        <br />
+                        About SOSO
+                    </a>
+                    <div style="display:none;">
+                        <a class="dropdown-link" href="@Url.RouteUrl("SOSOevents")" title="SOSO大事紀">
+                            SOSO大事紀
+                            <br />
+                            SOSO events
+                        </a>
+                        <a class="dropdown-link" href="@Url.RouteUrl("GGGGG")" title="食物簡介">
+                            食物簡介
+                            <br />
+                            Feed
+                        </a>
+                    </div>
+                </li>
+                @*<li>
+                    <a class="st-menu-link" href="@Url.RouteUrl("GGGGG")" title="關於我們">
+                        關於我們
+                        <br />
+                        About us
+                    </a>
+                </li>*@
+            </ul>
+        </nav>
+        <!-----------------SideBar End-------------------->
+
+        <!--點擊取消Sidebar區域-->
+        <div class="st-pusher">
+
+            <header class="nk-header">
+                <nav id="myNavbar" class="fixed-top navbar-dark" style="background-color:rgba(28,28,28,0.6);">
+
+                    <!--contanier-->
+                    <div class="container">
+
+                        <!--Navbar-lg-->
+                        <!--頁面寬度大於992px，顯示此Navbar-->
+                        <div id="Navbar-lg" class="nk-nav-table">
+                            <a class="navbar-brand nk-nav-logo" href="@Url.RouteUrl("Homepage")">
+                                <img src="~/Images/logo.png" title="SOSO部落格" alt="SOSO部落格" width="260" />
+                            </a>
+
+                            <ul class="navbar-nav mr-auto" style="position:relative;display:table-cell;vertical-align:middle;text-align:right;width:100%">
+                                <li class="nk-nav-item">
+                                    <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="Facebook粉絲專頁" target="_blank">
+                                        <span>
+                                            <i class="fa fa-facebook-square"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nk-nav-item mr-3">
+                                    <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="Instagram" target="_blank">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+
+                                <div class="clearfix"></div>
+
+                                <li class="nk-nav-item">
+                                    <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("ArticleList")" title="文章列表">
+                                        <span>
+                                            文章列表
+                                            <br />
+                                            Article list
+                                        </span>
+                                    </a>
+                                </li>
+
+                                @*<li class="nk-nav-item">
+                                    <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("GGGGG")" title="SOSO照片集">
+                                        <span>
+                                            SOSO照片集
+                                            <br />
+                                            Photo album
+                                        </span>
+                                    </a>
+                                </li>*@
+
+                                <li class="nk-nav-item dropdownlist">
+                                    <a class="nav-link nk-nav-link nk-nav-fun" href="javascript:;" title="關於SOSO">
+                                        <span>
+                                            關於SOSO
+                                            <br />
+                                            About SOSO
+                                        </span>
+                                    </a>
+                                    <ul class="dropdownlist-ul" style="display:none;">
+                                        <li class="dropdownlist-li">
+                                            <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("SOSOevents")" title="SOSO大事紀">
+                                                <span>
+                                                    SOSO大事紀
+                                                    <br />
+                                                    Events
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdownlist-li">
+                                            <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("GGGGG")" title="食物簡介">
+                                                <span>
+                                                    食物簡介
+                                                    <br />
+                                                    Feed
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                @*<li class="nk-nav-item">
+                                    <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("GGGGG")" title="關於我們">
+                                        <span>
+                                            關於我們
+                                            <br />
+                                            About us
+                                        </span>
+                                    </a>
+                                </li>*@
+                            </ul>
+
+                            @*<ul class="navbar-nav mr-auto" style="position:relative;display:table-cell;vertical-align:middle;text-align:right;width:1%;padding-left:10px;padding-top:35px;">
+                                <li class="nk-nav-item">
+                                    <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="搜尋">
+                                        <span>
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="navbar-nav mr-auto" style="position:relative;display:table-cell;vertical-align:middle;text-align:right;width:1%;padding-left:10px;padding-top:35px;">
+                                <li class="nk-nav-item">
+                                    <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="會員">
+                                        <span>
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>*@
+
+                        </div>
+                        <!--Navbar-lg End-->
+
+                        <!--Navbar-xs-->
+                        <!--頁面寬度小於992px，使用此Navbar-->
+                        <div id="Navbar-xs" class="nk-nav-table">
+                            <ul class="navbar-nav" style="position:relative;display:table-cell;vertical-align:middle;text-align:center;width:auto;">
+                                <li class="nk-nav-item">
+                                    <a id="btnSidebar" class="nav-link nk-nav-link nk-nav-icon" href="javascript:;" data-effect="st-effect-1" title="選單" style="background-color:rgba(0,0,0,0);border:none;">
+                                        <i data-effect="st-effect-1" class="fa fa-bars"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="navbar-nav" style="position:relative;display:table-cell;vertical-align:middle;text-align:center;width:auto;">
+                                <a class="navbar-brand nk-nav-logo" href="@Url.RouteUrl("Homepage")" style="display:inline-block;width:100%;text-align:center;">
+                                    <img src="~/Images/logo.png" title="SOSO部落格" alt="SOSO部落格" width="250" style="vertical-align:middle;" />
+                                </a>
+                            </ul>
+
+                            <ul class="navbar-nav" style="position:relative;display:table-cell;vertical-align:middle;text-align:center;width:auto;">
+                                <li class="nk-nav-item">
+                                    <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="Facebook粉絲專頁" style="background-color:rgba(0,0,0,0);border:none;" target="_blank">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Navbar-xs End-->
+
+                    </div>
+                    <!--contanier End-->
+
+                </nav>
+            </header>
+
+            <div>
+                @RenderBody()
+            </div>
+
+        </div>
+        <!--st-pusher 點擊取消Sidebar區域 End-->
+
+        <footer style="margin-top:5rem;">
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <a href="@Url.RouteUrl("Homepage")">
+                                <img class="img-fluid mt-2" src="~/Images/logo2.png" title="SOSO部落格" alt="SOSO部落格" />
+                            </a>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="https://goo.gl/maps/NHYQ5hH9GUZMNMX46" target="_blank" title="虎尾科技大學">
+                                <i class="fa fa-map-marker"></i>
+                                <br />
+                                <p>虎尾科技大學</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="#" target="_blank" title="臉書訊息Message">
+                                <i class="fa fa-phone"></i>
+                                <br />
+                                <p><i class="fa fa-commenting"></i> 臉書訊息Message</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="javascript:;" title="管理員入口" data-toggle="modal" data-target="#exampleModalCenter">
+                                <i class="fa fa-paw"></i>
+                                <br />
+                                <p>管理員入口</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2020 © SOSO部落格 Designed by 邱俊融</p>
+            </div>
+        </footer>
+
+    </div>
+    <!--st-container Sidebar顯示區域 End-->
+
+    <!--Modal 登入視窗-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header bg-primary text-light">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">管理員入口</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form action="@Url.RouteUrl("LoginIn")" method="post">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="password">通關密語</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                        <button type="submit" class="btn btn-outline-primary" onclick="return check()">登入</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!--Modal 登入視窗 End-->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/MyJs")
+    @Scripts.Render("~/bundles/Sidebar")
+
+    <script type="text/javascript">
+        function check() {
+            let wei = $(window).width();
+            if (wei <= 576) {
+                alert("請勿以手機裝置登入");
+                return false;
+            }
+            return true;
+        };
+    </script>
+
+    @RenderSection("js", required: false)
+
+</body>
+</html>

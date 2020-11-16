@@ -1,0 +1,49 @@
+﻿@model IEnumerable<_0110Work.Models.Article>
+
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li>標題:@item.title</li>
+            <li>小標題:@item.littleTitle</li>
+            <li>postdate:@item.postDate</li>
+            @if(item.editDate != null)
+            {
+                <li>postdate:@item.editDate</li>
+            }
+            <img src="~/Images/ArticleImg/@item.imageName" title="@item.title" alt="@item.title"/>
+            @Html.Raw(item.content)
+        </ul>
+    }
+
+    @using (Html.BeginForm("About", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="form-group">
+            <label>Type</label>
+            <select class="form-control" name="Type">
+                <option value="0">新增</option>
+                <option value="1">修改</option>
+                <option value="2">刪除</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label>Little Title</label>
+            <input type="text" class="form-control" name="littleTitle" placeholder="Little Title">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    }
+
+</div>

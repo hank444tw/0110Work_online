@@ -1,0 +1,212 @@
+﻿/*-------start按鈕---------*/
+.start{
+    text-align:center;
+    position:relative;
+    top:-100px;
+}
+
+.start-icon {
+    color: #bcbcbc;
+    font-size: 2.8rem;
+    transition: opacity 0.3s linear;
+}
+
+.start-icon:hover{
+    color: #bcbcbc;
+    opacity:0.5;
+}
+/*-------start按鈕 End---------*/
+
+/*---------文章列表-----------*/
+.article-img {
+    padding: 10px;
+    border: 1px solid #dad7d7;
+    transition:background-color 0.5s;
+}
+
+.article-img:hover{
+    background-color: rgba(28, 28, 28, 0.75);
+    opacity:0.7;
+}
+
+.article-img div {
+    text-align:center;
+    transition: transform 0.8s ease-in-out;
+}
+
+.article-img > div:hover{
+    transform:scale(1.05);
+}
+
+/*.article-img-eye{
+    display:none;
+    position:absolute;
+    top:38%;
+    left:45%
+}
+
+.article-img-eye a{
+    color:white;
+    display:inline-block;
+    font-size:1.2rem;
+    width:40px;
+    height:40px;
+    padding:4px;
+    border-radius:20px;
+    border:1px solid;
+}
+
+.article-img-eye a:hover{
+    color:black;
+    background-color:white;
+}
+
+.article-img-eye a i{
+    padding-left:5px;
+}*/
+
+.article {
+    margin-bottom:40px;
+}
+
+.article h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight:bold;
+}
+
+.article > a{
+    color:black;
+    text-decoration:none;
+    transition:opacity 1s;
+}
+
+.article > a:hover{
+    color:#5b270b;
+    opacity:0.6;
+}
+
+.article p {
+    text-align:right;
+    margin-bottom:0;
+    opacity:0.8;
+}
+
+.article hr{
+    margin-top:0;
+    margin-bottom:0.5rem;
+}
+
+.article-bottom{
+    text-align:right;
+}
+
+.article-bottom a{
+    position:relative;
+    font-weight:bold;
+    color:#5b270b;
+    text-decoration:none;
+    transition: all 0.8s ease;
+    right:5px;
+}
+
+.article-bottom a:hover{
+    right:-15px;
+}
+/*---------文章列表 End-----------*/
+
+/*---------進入列表--------------*/
+.golist{
+    text-align:center;
+}
+
+.golist-btn {
+    color: #5b270b;
+    border-style: solid;
+    border-color: #a7844f;
+    border-width: 0.8px;
+    background-color: #f5f6f7;
+    font-size: 1.1rem;
+    padding: 10px 36px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+.golist-btn:hover{
+    color:white;
+}
+
+.golist-btn-span{
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#5b270b;
+    width:0%;
+    height:100%;
+    z-index:-1;
+    transition:all 0.3s;
+}
+
+/*---------進入列表 End--------------*/
+
+/*---------SOSO相片輪播-------------*/
+.traffic {
+    text-align: center;
+    background-color: #c9baaf;
+    margin-top: 80px;
+    box-shadow: 0px 3px 11px 0px rgba(157,154,152,1);
+}
+
+.traffic h3{
+    color:#522309;
+    font-weight:bold;
+}
+
+.flex-caption {
+    position: absolute;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 2%;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    font-size: 20px;
+    line-height: 18px;
+}
+/*---------SOSO相片輪播 End-------------*/
+
+/*---------三資訊區塊-------------*/
+/*.threeblock {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.threeblock-block {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+.threeblock-block > div{
+    height:100%;
+    width:100%;
+    padding:30px 10px;
+}
+
+.threeblock-block i{
+    color:white;
+}
+
+.threeblock-block > div > i{
+    font-size:3.5rem;
+    margin-bottom:5px;
+}
+
+.threeblock-block a,.threeblock-block h4,.threeblock-block p{
+    color:#5b270b;
+    font-weight:bold;
+    text-decoration:none;
+    margin-bottom:1px;
+}*/
+/*---------三資訊區塊 End-------------*/

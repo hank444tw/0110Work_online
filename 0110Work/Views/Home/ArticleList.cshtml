@@ -1,0 +1,49 @@
+﻿@model IEnumerable<_0110Work.Models.Article>
+
+@{
+    ViewBag.Title = "文章列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css{
+    <link href="~/Content/index.css" rel="stylesheet" />
+}
+
+@section js{
+    
+}
+
+<div id="bigimg" class="mb-5">
+    <img id="banner-lg" class="img-fluid" style="opacity:0.8;" src="~/Images/banner3.jpg" />
+    <img id="banner-xs" class="img-fluid" style="opacity:0.8;" src="~/Images/banner4.jpg" />
+</div>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6">
+                <div class="article">
+                    <div class="article-img">
+                        <div>
+                            <a href="@Url.RouteUrl("Article",new {title=item.title})" title="@item.title">
+                               <img class="img-fluid" src="~/Images/ArticleImg/@item.imageName" alt="@item.title" title="@item.title" />
+                            </a>
+                        </div>
+                    </div>
+                    <a href="@Url.RouteUrl("Article",new {title=item.title})" title="@item.title">
+                        <h4>@item.title</h4>
+                    </a>
+                    <p><small>@item.postDate.Value.Year-@item.postDate.Value.Month-@item.postDate.Value.Day</small></p>
+                    <hr />
+                    <div class="article-bottom">
+                        <a href="@Url.RouteUrl("Article",new {title=item.title})" title="More">
+                            More <i class="fa fa-forward"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

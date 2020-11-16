@@ -1,0 +1,100 @@
+﻿@model IEnumerable<_0110Work.Models.Article>
+
+@{
+    ViewBag.Title = "SOSO部落格";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css{
+    <link href="~/Content/index.css" rel="stylesheet" />
+    <link href="~/FlexSlider/flexslider.css" rel="stylesheet" />
+}
+
+@section js{
+    <script src="~/Scripts/index.js"></script>
+    <script src="~/FlexSlider/jquery.flexslider-min.js"></script>
+}
+
+<div id="bigimg">
+    <img id="banner-lg" class="img-fluid" src="~/Images/banner1.jpg" />
+    <img id="banner-xs" class="img-fluid" src="~/Images/banner2.jpg" />
+</div>
+
+<div class="start">
+    <a id="starticon" class="start-icon" href="javascript:;" title="Start">
+        <i class="fa fa-chevron-circle-down"></i>
+    </a>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6">
+                <div class="article">
+                    <div class="article-img">
+                        <div>
+                            <a href="@Url.RouteUrl("Article",new {title=item.title})" title="@item.title">
+                                <img class="img-fluid" src="~/Images/ArticleImg/@item.imageName" alt="@item.title" title="@item.title" />
+                            </a>
+                        </div>
+                    </div>
+                    <a href="@Url.RouteUrl("Article",new {title=item.title})" title="@item.title">
+                        <h4>@item.title</h4>
+                    </a>
+                    <p><small>@item.postDate.Value.Year-@item.postDate.Value.Month-@item.postDate.Value.Day</small></p>
+                    <hr />
+                    <div class="article-bottom">
+                        <a href="@Url.RouteUrl("Article",new {title=item.title})" title="More">
+                            More <i class="fa fa-forward"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="golist">
+    <a href="@Url.RouteUrl("ArticleList")" title="進入列表">
+        <button class="golist-btn">
+            <sapn class="golist-btn-span"></sapn>
+            進入列表
+        </button>
+    </a>
+</div>
+
+<div class="traffic">
+    <h3>
+        SOSO
+        <small>の</small>
+        相片
+    </h3>
+</div>
+
+<div class="flexslider">
+    <ul class="slides">
+        <!--圖片尺寸1600*750-->
+        <li>
+            <img src="~/Images/CarouselImg/IMAG0920.jpg" />
+            <p class="flex-caption">睡飽了，可是不想起來...</p>
+        </li>
+        <li>
+            <img src="~/Images/CarouselImg/IMAG1212.jpg" />
+            <p class="flex-caption">你在看我嗎？誰先扎眼就輸了！！！</p>
+        </li>
+        <li>
+            <img src="~/Images/CarouselImg/IMAG1376.jpg" />
+            <p class="flex-caption">呼嚕嚕嚕嚕～</p>
+        </li>
+        <li>
+            <img src="~/Images/CarouselImg/IMAG1572.jpg" />
+            <p class="flex-caption">不准偷看我睡臉！擋起來！</p>
+        </li>
+        <li>
+            <img src="~/Images/CarouselImg/IMAG1652.jpg" />
+            <p class="flex-caption">！！！ 那個是...獵物！？</p>
+        </li>
+    </ul>
+</div>

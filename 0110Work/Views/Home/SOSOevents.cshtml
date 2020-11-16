@@ -1,0 +1,328 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "SOSO大事紀";
+}
+
+@section css{
+    <link href="~/Scripts/aos-master/dist/aos.css" rel="stylesheet" />
+    <link href="~/Content/SOSOevents.css" rel="stylesheet" />
+}
+
+@section js{
+    <script src="~/Scripts/aos-master/dist/aos.js"></script>
+
+    <script>
+        //$(function () {
+            let hei = $(document).height();
+            let wid = $(document).width();
+            $("#divMaskFrame").css("height", hei).css("width", wid);
+
+            //頁面載入完成後
+            window.onload = function () {
+                AOS.init(); //AOS套件資料繫結
+                $(".loader").fadeOut(3000); //GIF圖
+                $("#divMaskFrame").fadeOut(3000); //遮罩
+            };
+        //});
+    </script>
+
+    <script src="~/Scripts/SOSOevents.js"></script>
+}
+
+<!--loading遮罩-->
+<div class="loader" style="text-align:center; position: fixed; top: 50%;  left: 50%;z-index:999999;">
+    <img src="~/Images/loading.gif" />
+</div>
+<div id="divMaskFrame" style="background-color:black;left: 0px;position: absolute; top: 0px;z-index:999998;opacity:0.9;"></div>
+<!--loading遮罩 End-->
+
+<div id="bigimg" class="mb-3">
+    <img id="banner-lg" class="img-fluid" src="~/Images/banner5.jpg" />
+    <img id="banner-xs" class="img-fluid" src="~/Images/banner6.jpg" />
+</div>
+
+<div class="container mt-5 mb-5">
+
+    <div class="text-center mb-5">
+        <h2>SOSO大事紀</h2>
+        <h4 class="text-black-50">讓我們從頭開始認識SOSO吧！</h4>
+        <hr class="text-black-50" />
+    </div>
+
+    <div class="text-center text-black-50">
+        <h3><b>相遇的起點</b></h3>
+    </div>
+
+    <!--1 領養SOSO-->
+    <div class="row colorborder-right">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#f8d9c2,#f0ffff);">
+            <div data-aos="fade-up">
+                <div class="content-left" style="background-color: #f8d9c2;">
+                    <div class="title">
+                        <h4>領養SOSO</h4>
+                        <span class="text-black-50">2017-9-11</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/1.jpg" class="img-fluid" title="領養SOSO" alt="領養SOSO" />
+                        <i class="fa fa-arrow-circle-down btnslide-left" style="font-size:2.5rem;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>這天，一隻六個月大的小橘貓走進了我的生命</p>
+                        <p>起初稍微怕人，只敢在衣櫥縫隙中微微張望</p>
+                        <p>但一聞到罐頭的香味</p>
+                        <p>還是禁不住誘惑，出來大快朵頤一番，好吃好吃</p>
+                        <p class="text-right">2017-9-11<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--1 領養SOSO End-->
+    <!--2 回彰化家-->
+    <div class="row colorborder-left">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#f0ffff,#ffc5cb);">
+            <div data-aos="fade-up">
+                <div class="content-right" style="background-color: #f0ffff;">
+                    <div class="title">
+                        <h4>回彰化家</h4>
+                        <span class="text-black-50">2017-9-22</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/2.jpg" class="img-fluid" title="回彰化家" alt="回彰化家" />
+                        <i class="fa fa-arrow-circle-down btnslide-right" style="font-size:2.5rem;color:#9ab5b5;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>SOSO正式從宿舍入住彰化家</p>
+                        <p>一開始免不了又是段躲躲藏藏的適應期</p>
+                        <p>偶然一次進房門，竟然自己跳上了衣櫥上休息</p>
+                        <p>一時興起拿塊貓抓板給她，看起來頗為滿意</p>
+                        <p class="text-right">2017-9-22<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--2 回彰化家 End-->
+    <!-- 3 結紮-->
+    <div class="row colorborder-right">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#ffc5cb,#d7ffe2);">
+            <div data-aos="fade-up">
+                <div class="content-left" style="background-color: #ffc5cb;">
+                    <div class="title">
+                        <h4>結紮</h4>
+                        <span class="text-black-50">2017-11-11</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/3.jpg" class="img-fluid" title="結紮" alt="結紮" />
+                        <i class="fa fa-arrow-circle-down btnslide-left" style="font-size:2.5rem;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>手術完回家後，彷若回到兩個月前初次進家門般的驚慌失措</p>
+                        <p>就算身上穿著防舔衣，一屁股就塞進沙發底下</p>
+                        <p>擔心傷口裂口，將沙發抬些起來</p>
+                        <p>吃完罐頭，便搖搖晃晃地走了出來，令人心疼</p>
+                        <p class="text-right">2017-11-11<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 3 結紮 End-->
+    <!--4 床不滿意!?自己造一個!-->
+    <div class="row colorborder-left">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#d7ffe2,#f6f8c2);">
+            <div data-aos="fade-up">
+                <div class="content-right" style="background-color: #d7ffe2;">
+                    <div class="title">
+                        <h4>床不滿意!? 自己造一個!</h4>
+                        <span class="text-black-50">2018-3-18</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/4.jpg" class="img-fluid" title="床不滿意!?自己造一個!" alt="床不滿意!?自己造一個!" />
+                        <i class="fa fa-arrow-circle-down btnslide-right" style="font-size:2.5rem;color:#93b39b;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>SOSO開始輪流住在宿舍及彰化家</p>
+                        <p>一次下課回來後</p>
+                        <p>發現竟把衛生紙鋪成墊子，理直氣壯地趴在上面</p>
+                        <p>由此可見，SOSO具備DIY的精神，堪稱一代匠「貓」</p>
+                        <p class="text-right">2018-3-18<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--4 床不滿意!?自己造一個! End-->
+
+    <hr />
+    <div class="text-center text-black-50 mt-5">
+        <h3><b>滿1歲囉！</b></h3>
+    </div>
+
+    <!--5 生日快樂-->
+    <div class="row colorborder-right">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#f6f8c2,#f2daea);">
+            <div data-aos="fade-up">
+                <div class="content-left" style="background-color: #f6f8c2;">
+                    <div class="title">
+                        <h4>生日快樂</h4>
+                        <span class="text-black-50">2018-9-11</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/5.jpg" class="img-fluid" title="生日快樂" alt="生日快樂" />
+                        <i class="fa fa-arrow-circle-down btnslide-left" style="font-size:2.5rem;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>SOSO滿1歲囉(從領養時開始算起)</p>
+                        <p>代表SOSO正式為成貓了</p>
+                        <p>這天，拿出特別買的好味小姐貓漢堡，當作生日蛋糕</p>
+                        <p>可惜SOSO並不賞臉 QQ</p>
+                        <p class="text-right">2018-9-11<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--5 生日快樂 End-->
+    <!--6 過年穿新衣-->
+    <div class="row colorborder-left">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#f2daea,#d7d7d5);">
+            <div data-aos="fade-up">
+                <div class="content-right" style="background-color: #f2daea;">
+                    <div class="title">
+                        <h4>過年穿新衣</h4>
+                        <span class="text-black-50">2019-1-29</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/6.jpg" class="img-fluid" title="過年穿新衣" alt="過年穿新衣" />
+                        <i class="fa fa-arrow-circle-down btnslide-right" style="font-size:2.5rem;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>SOSO身為我們家一份子，當然也要過新年!</p>
+                        <p>應景地給她穿了件紅色系毛絨衣服</p>
+                        <p>瞬間貴氣逼人，果然是天生麗質</p>
+                        <p>最後走路會卡到，終以退貨收場</p>
+                        <p class="text-right">2019-1-29<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--6 過年穿新衣 End-->
+    <!--7 預料之外的發情-->
+    <div class="row colorborder-right">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#d7d7d5,#fcdcd8);">
+            <div data-aos="fade-up">
+                <div class="content-left" style="background-color: #d7d7d5;">
+                    <div class="title">
+                        <h4>預料之外的發情</h4>
+                        <span class="text-black-50">2019-4-19</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/7.jpg" class="img-fluid" title="預料之外的發情" alt="預料之外的發情" />
+                        <i class="fa fa-arrow-circle-down btnslide-left" style="font-size:2.5rem;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>SOSO開始發情了</p>
+                        <p>不只叫聲轉為悲鳴，也不時痛苦地在地上摩擦</p>
+                        <p>醫師研判為之前結紮，卵巢摘除不徹底，才有此現象</p>
+                        <p>故安排了幾天後的手術，並且將腹部的毛先剔除</p>
+                        <p>後悔當初沒有慎選結紮醫院...</p>
+                        <p class="text-right">2019-4-19<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--7 預料之外的發情 End-->
+    <!--8 手術成功-->
+    <div class="row colorborder-left">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#fcdcd8,#d1f9fa);">
+            <div data-aos="fade-up">
+                <div class="content-right" style="background-color: #fcdcd8;">
+                    <div class="title">
+                        <h4>手術成功</h4>
+                        <span class="text-black-50">2019-4-25</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/8.jpg" class="img-fluid" title="手術成功" alt="手術成功" />
+                        <i class="fa fa-arrow-circle-down btnslide-right" style="font-size:2.5rem;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>此次手術比之前結紮手術的傷口，還要大許多</p>
+                        <p>任何較大的動作，都牽動著腹部的傷口</p>
+                        <p>嚴重時，甚至會讓SOSO痛得跳起</p>
+                        <p>深怕傷口裂開，繃帶自傷口滑落，只好先暫時不處理</p>
+                        <p>讓SOSO自己以最適合的姿勢休息</p>
+                        <p class="text-right">2019-4-25<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--8 手術成功 End-->
+    <!--9 一箱SOSO-->
+    <div class="row colorborder-right">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#d1f9fa,#e7d8fc);">
+            <div data-aos="fade-up">
+                <div class="content-left" style="background-color: #d1f9fa;">
+                    <div class="title">
+                        <h4>一箱SOSO</h4>
+                        <span class="text-black-50">2019-7-2</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/9.jpg" class="img-fluid" title="一箱SOSO" alt="一箱SOSO" />
+                        <i class="fa fa-arrow-circle-down btnslide-left" style="font-size:2.5rem;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>是的，貓的確是液體做的</p>
+                        <p>小紙箱原本用意是給SOSO玩球使用</p>
+                        <p>沒想到她卻能將之用到如此淋漓盡致</p>
+                        <p class="text-right">2019-7-2<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--9 一箱SOSO End-->
+
+    <hr />
+    <div class="text-center text-black-50 mt-5">
+        <h3><b>2歲</b></h3>
+    </div>
+
+    <!--10 看世界之遼闊-->
+    <div class="row colorborder-left">
+        <div class="col-6" style="background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#e7d8fc,#d1f9fa);">
+            <div data-aos="fade-up">
+                <div class="content-right" style="background-color: #e7d8fc;">
+                    <div class="title">
+                        <h4>看世界之遼闊</h4>
+                        <span class="text-black-50">2019-10-01</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/EventsImg/10.jpg" class="img-fluid" title="看世界之遼闊" alt="看世界之遼闊" />
+                        <i class="fa fa-arrow-circle-down btnslide-right" style="font-size:2.5rem;"></i>
+                    </div>
+                    <div class="text-black-50 under" style="display:none;">
+                        <p>初上河堤時，SOSO有些瑟瑟發抖，甚至於撇頭不看</p>
+                        <p>我將貓背包放在地上，比肩而坐</p>
+                        <p>一會兒，SOSO已不再發抖，並且睜大了雙眼</p>
+                        <p>我想像著此時她的所見、她的念頭、她的心情...</p>
+                        <p class="text-right">2019-10-01<i class="fa fa-paw"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--10 看世界之遼闊 End-->
+    <!--結尾-->
+    <div class="text-center mt-5">
+        <h2><i class="fa fa-paw"></i> To Be Continued</h2>
+        <h6 class="text-black-50">SOSO的貓生還在繼續</h6>
+        <h6 class="text-black-50">這過程中的日常，都將是我們記憶中永遠的珍藏</h6>
+    </div>
+    <!--結尾 End-->
+
+</div>

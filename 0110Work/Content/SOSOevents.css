@@ -1,0 +1,85 @@
+﻿/*--------每個區塊的側邊邊框-------*/
+.colorborder-right > div {
+    background-clip: padding-box,border-box;
+    background-origin: padding-box,border-box;
+    border-right: 0.5rem transparent solid;
+    padding: 0;
+    margin-left: 0.25rem;
+    box-shadow: 5px 0px 4px -4px black;
+}
+
+.colorborder-left{
+    justify-content:flex-end;
+}
+
+.colorborder-left > div {
+    background-clip: padding-box,border-box;
+    background-origin: padding-box,border-box;
+    background-image: linear-gradient(#f5f6f7,#f5f6f7),linear-gradient(#E70303,#FFFF44);
+    border-left: 0.5rem transparent solid;
+    padding: 0;
+    margin-right:0.25rem;
+    box-shadow:inset 5px 0px 4px -4px black;
+}
+/*--------每個區塊的側邊邊框 End-------*/
+
+/*--------區塊標題文字-------*/
+.title h4{
+    display:inline-block;
+    margin-bottom:0;
+    margin-left:5px;
+}
+
+.title span {
+    float: right;
+    margin-bottom: 0;
+    margin-top:1px;
+    margin-right:5px;
+}
+/*--------區塊標題文字 End-------*/
+
+/*--------區塊陰影-------*/
+.content-left {
+    box-shadow: -2px 2px 4px black;
+}
+
+.content-right {
+    box-shadow: 2px 2px 4px black;
+}
+/*--------區塊陰影 End-------*/
+
+/*--------下滑按鈕--------*/
+.btnslide-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    transition: transform 0.5s ease-in-out;
+    color: #2b2522;
+}
+
+.btnslide-left:hover{
+    opacity:1;
+}
+
+.btnslide-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.8;
+    transition: transform 0.5s ease-in-out;
+    color: #2b2522;
+}
+
+.btnslide-right:hover{
+    opacity:1;
+}
+/*--------下滑按鈕 End--------*/
+
+/*--------結尾-------*/
+.under p {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    margin-right:1.8rem;
+}
+/*--------結尾 End-------*/

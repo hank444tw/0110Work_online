@@ -1,0 +1,99 @@
+﻿.nk-header{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    z-index:1000;
+}
+
+.nk-nav-table{
+    display:table;
+    width:100%;
+    height:100%;
+    /*font-size:1.3rem;*/
+}
+
+.nk-nav-logo{
+    display:table-cell;
+    vertical-align:middle;
+    width:1%;
+}
+
+.nk-nav-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nk-nav-link{
+    position:relative;
+    display:block;
+    text-align:center;
+}
+
+.nk-nav-icon{
+    font-size:1.5rem;
+    padding:6px;
+    margin-right:5px;
+}
+
+.nk-nav-fun {
+    padding: 0.125rem;
+    margin-right:20px;
+    margin-left:20px;
+}
+
+.sid-link-icon {
+    color: rgba(255,255,255,.5);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.sid-link-icon:hover{
+    color:white;
+    text-decoration:none;
+}
+
+.dropdownlist-ul {
+    position: absolute;
+    list-style:none;
+    background-color: rgba(28,28,28,0.8);
+    padding-left:0px;
+}
+
+.dropdownlist-li{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/*footer區塊*/
+.footer{
+    color:white;
+    text-align:center;
+    background-color:#c9baaf;
+}
+
+.footer > div > div > div > a > i{
+    font-size:2rem;
+    margin-top:1.5rem;
+}
+
+.footer a{
+    color:#ab6c3d;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.footer a:hover{
+    color:#522309;
+}
+
+.footer-bottom{
+    text-align:center;
+    background-color:#211811;
+    color:#bbb49e;
+}
+
+.footer-bottom p{
+    margin-bottom:0;
+}

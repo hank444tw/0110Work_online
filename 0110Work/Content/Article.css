@@ -1,0 +1,47 @@
+﻿/*-------文章------*/
+.article{
+    background-color:white;
+    padding-top:2.5rem;
+    padding-bottom:2.5rem;
+    padding-right:3.5rem;
+    padding-left:3.5rem;
+}
+
+.article-bar{
+    width:3rem;
+    height:0.25rem;
+    background-color:#faca71;
+}
+
+.article-date > p{
+    display:inline-block;
+    margin-right:1rem;
+    margin-bottom:0px;
+}
+
+.article-ltitle {
+    background-color: #f5f6f7;
+    height: 5rem;
+    color: #fbbc45;
+    font-weight:bold;
+}
+
+.article-content img{
+    width:100%;
+    height:auto;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+/*-------文章 End------*/
+
+/*------goTop按鈕--------*/
+.up{
+    position:absolute;
+    color:#fbbc45;
+    opacity:0.7;
+}
+
+.up:hover{
+    opacity:1;
+}
+/*------goTop按鈕 End--------*/

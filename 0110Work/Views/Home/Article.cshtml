@@ -1,0 +1,51 @@
+﻿@model _0110Work.Models.Article
+
+@{
+    ViewBag.Title = Model.title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css{
+    <link href="~/Content/ClipImg.css" rel="stylesheet" />
+    <link href="~/Content/Article.css" rel="stylesheet" />
+}
+
+@section js{
+    <script src="~/Scripts/Article.js"></script>
+}
+
+<div id="bigimg" class="clip mb-5">
+    <img id="banner-lg" class="clip-img-lg" src="~/Images/ArticleImg/@Model.imageName" />
+    <img id="banner-xs" class="clip-img-xs" src="~/Images/ArticleImg/@Model.imageName" />
+</div>
+
+<div class="container">
+    <div class="article mt-5">
+        <div class="article-bar mb-3"></div>
+
+        <h1 class="mb-4"><b>@Model.title</b></h1>
+
+        <div class="article-date">
+            <p><small>發表日期 : @Model.postDate</small></p>
+            @if (Model.editDate != null)
+            {
+                <p><small>最後修改日期 : @Model.editDate</small></p>
+            }
+        </div>
+
+        <hr class="text-black-50 mt-1 mb-4" />
+
+        @if (Model.littleTitle != null)
+        {
+            <div class="row justify-content-center align-items-center article-ltitle mt-4 mb-4">
+                <div>@Model.littleTitle</div>
+            </div>
+        }
+
+        <div class="article-content">
+            @Html.Raw(Model.content)
+        </div>
+    </div>
+</div>
+
+<i id="btnUp" class="fa fa-arrow-circle-up up" title="goTop" style="font-size:3rem;display:none;"></i>
