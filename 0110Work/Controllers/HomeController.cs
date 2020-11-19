@@ -445,7 +445,7 @@ namespace _0110Work.Controllers
         [HttpPost]
         public ActionResult LoginIn(string password)
         {
-            if(password.Trim() != "admin43610666")
+            if(password.Trim() != "admin")
             {
                 return RedirectToAction("Index");
             }
