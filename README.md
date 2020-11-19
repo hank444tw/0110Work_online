@@ -26,7 +26,7 @@
 * 網站架構
   |        | 說明 |程式 |
   |------- |:-----|:------:|
-  | **前端**   |  1. 具有兩條`navbar`，透過撰寫`js`程式，當頁面寬度小於`992px`，則轉換為手機平板用的。 <br>2. 當頁面寬度小於`768px`，轉換為直式的`banner`。</br> 3. 透過`css`和`js`實現一些頁面動態互動的效果(Ex:`css`的`transform`屬性、`js`的`事件監聽`) |  [程式碼](https://github.com/hank444tw/0617Work/blob/master/0617Work/Views/Home/Index.cshtml) |
+  | **前端**   |  1. 具有兩條`navbar`，透過撰寫`js`程式，當頁面寬度小於`992px`，則轉換為手機平板用的。 <br>2. 當頁面寬度小於`768px`，轉換為直式的`banner`。</br> 3. 透過`css`和`js`實現一些頁面動態的效果(Ex:`css`的`transform`屬性、`js`的`事件監聽`)</br>4. 使用`aos`套件搭配`js``事件監聽`實現大事記頁面區塊飛升效果。</br>5. 使用`ckeditor`文章編輯器套件，再以`js`驗證圖片上傳格式，以及取得文章內容回傳後端。 |  [程式碼](https://github.com/hank444tw/0617Work/blob/master/0617Work/Views/Home/Index.cshtml) |
   | **後端**   |  1. 第  |  [程式碼](https://github.com/hank444tw/0617Work/blob/master/0617Work/Controllers/HomeController.cs) |
   | **資料庫** |  1. 使  |   [程式碼](https://github.com/hank444tw/0617Work/blob/master/0617Work/Python/0617Work.py) |
   | **伺服器** |  1. 使  |   [程式碼](https://github.com/hank444tw/0617Work/blob/master/0617Work/Python/0617Work.py) | 
