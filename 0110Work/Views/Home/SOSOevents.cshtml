@@ -9,22 +9,23 @@
     <link href="~/Content/SOSOevents.css" rel="stylesheet" />
 }
 
+
 @section js{
     <script src="~/Scripts/aos-master/dist/aos.js"></script>
 
     <script>
         //$(function () {
-            let hei = $(document).height();
-            let wid = $(document).width();
-            $("#divMaskFrame").css("height", hei).css("width", wid);
+        let hei = $(document).height();
+        let wid = $(document).width();
+        $("#divMaskFrame").css("height", hei).css("width", wid);
 
-            //頁面載入完成後
-            window.onload = function () {
-                AOS.init(); //AOS套件資料繫結
-                $(".loader").fadeOut(3000); //GIF圖
-                $("#divMaskFrame").fadeOut(3000); //遮罩
-            };
-        //});
+        //頁面載入完成後
+        window.onload = function () {
+            AOS.init(); //AOS套件資料繫結
+            $(".loader").fadeOut(3000); //GIF圖
+            $("#divMaskFrame").fadeOut(3000); //遮罩
+        };
+            //});
     </script>
 
     <script src="~/Scripts/SOSOevents.js"></script>
