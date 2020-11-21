@@ -11,7 +11,7 @@
 
 * 開發工具
   1. Visual Studio 2017
-  2. Sourcetree
+  2. Sourcetree 3.3.9
 
 * 使用技術
   1. ASP.NET MVC
