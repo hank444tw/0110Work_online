@@ -8,7 +8,11 @@
   3. 線上撰寫文章，上傳文章圖片。
   4. 文章管理CRUD。
   5. RWD響應式網頁。
- 
+
+* 開發工具
+  1. Visual Studio 2017
+  2. Sourcetree
+
 * 使用技術
   1. ASP.NET MVC
   2. C#
@@ -16,11 +20,7 @@
   4. css
   5. Ajax
   6. Entity framework
-  7. Linq   
-
-* 開發工具
-  1. Visual Studio 2017
-  2. Sourcetree
+  7. Linq
 
 * 架站技術
   1. iis
