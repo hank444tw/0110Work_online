@@ -16,7 +16,11 @@
   4. css
   5. Ajax
   6. Entity framework
-  7. Linq
+  7. Linq   
+
+* 開發工具
+  1. Visual Studio 2017
+  2. Sourcetree
 
 * 架站技術
   1. iis
