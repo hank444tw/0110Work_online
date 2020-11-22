@@ -13,10 +13,9 @@
 
     <title>@ViewBag.Title - SOSO部落格</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/MyCss")
-    @RenderSection("css", required: false)
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    @RenderSection("css", required: false)
 </head>
 <body>
     <!--Sidebar顯示區域-->
@@ -52,12 +51,12 @@
                     </a>
                 </li>
                 @*<li>
-                    <a class="st-menu-link" href="@Url.RouteUrl("GGGGG")" title="SOSO照片集">
-                        SOSO照片集
-                        <br />
-                        Photo album
-                    </a>
-                </li>*@
+                        <a class="st-menu-link" href="@Url.RouteUrl("GGGGG")" title="SOSO照片集">
+                            SOSO照片集
+                            <br />
+                            Photo album
+                        </a>
+                    </li>*@
                 <li>
                     <a class="st-menu-link st-menu-dropdown" href="javascript:;" title="關於SOSO">
                         關於SOSO
@@ -78,16 +77,15 @@
                     </div>
                 </li>
                 @*<li>
-                    <a class="st-menu-link" href="@Url.RouteUrl("GGGGG")" title="關於我們">
-                        關於我們
-                        <br />
-                        About us
-                    </a>
-                </li>*@
+                        <a class="st-menu-link" href="@Url.RouteUrl("GGGGG")" title="關於我們">
+                            關於我們
+                            <br />
+                            About us
+                        </a>
+                    </li>*@
             </ul>
         </nav>
         <!-----------------SideBar End-------------------->
-
         <!--點擊取消Sidebar區域-->
         <div class="st-pusher">
 
@@ -131,14 +129,14 @@
                                 </li>
 
                                 @*<li class="nk-nav-item">
-                                    <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("GGGGG")" title="SOSO照片集">
-                                        <span>
-                                            SOSO照片集
-                                            <br />
-                                            Photo album
-                                        </span>
-                                    </a>
-                                </li>*@
+                                        <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("GGGGG")" title="SOSO照片集">
+                                            <span>
+                                                SOSO照片集
+                                                <br />
+                                                Photo album
+                                            </span>
+                                        </a>
+                                    </li>*@
 
                                 <li class="nk-nav-item dropdownlist">
                                     <a class="nav-link nk-nav-link nk-nav-fun" href="javascript:;" title="關於SOSO">
@@ -170,39 +168,38 @@
                                     </ul>
                                 </li>
                                 @*<li class="nk-nav-item">
-                                    <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("GGGGG")" title="關於我們">
-                                        <span>
-                                            關於我們
-                                            <br />
-                                            About us
-                                        </span>
-                                    </a>
-                                </li>*@
+                                        <a class="nav-link nk-nav-link nk-nav-fun" href="@Url.RouteUrl("GGGGG")" title="關於我們">
+                                            <span>
+                                                關於我們
+                                                <br />
+                                                About us
+                                            </span>
+                                        </a>
+                                    </li>*@
                             </ul>
 
                             @*<ul class="navbar-nav mr-auto" style="position:relative;display:table-cell;vertical-align:middle;text-align:right;width:1%;padding-left:10px;padding-top:35px;">
-                                <li class="nk-nav-item">
-                                    <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="搜尋">
-                                        <span>
-                                            <i class="fa fa-search"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
+                                    <li class="nk-nav-item">
+                                        <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="搜尋">
+                                            <span>
+                                                <i class="fa fa-search"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
 
-                            <ul class="navbar-nav mr-auto" style="position:relative;display:table-cell;vertical-align:middle;text-align:right;width:1%;padding-left:10px;padding-top:35px;">
-                                <li class="nk-nav-item">
-                                    <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="會員">
-                                        <span>
-                                            <i class="fa fa-user"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>*@
+                                <ul class="navbar-nav mr-auto" style="position:relative;display:table-cell;vertical-align:middle;text-align:right;width:1%;padding-left:10px;padding-top:35px;">
+                                    <li class="nk-nav-item">
+                                        <a class="nav-link nk-nav-link nk-nav-icon" href="#" title="會員">
+                                            <span>
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>*@
 
                         </div>
                         <!--Navbar-lg End-->
-
                         <!--Navbar-xs-->
                         <!--頁面寬度小於992px，使用此Navbar-->
                         <div id="Navbar-xs" class="nk-nav-table">
@@ -283,7 +280,6 @@
 
     </div>
     <!--st-container Sidebar顯示區域 End-->
-
     <!--Modal 登入視窗-->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -315,10 +311,11 @@
     </div>
     <!--Modal 登入視窗 End-->
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Js")
     @Scripts.Render("~/bundles/MyJs")
     @Scripts.Render("~/bundles/Sidebar")
+
+    @RenderSection("js", required: false)
 
     <script type="text/javascript">
         function check() {
@@ -330,8 +327,6 @@
             return true;
         };
     </script>
-
-    @RenderSection("js", required: false)
 
 </body>
 </html>
