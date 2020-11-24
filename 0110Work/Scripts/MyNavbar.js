@@ -1,34 +1,34 @@
-﻿//-------------依視窗大小，調換Navbar和banner-----------
-$(window).resize(function () {
-    changeNav();
-});
+﻿//改使用css的media屬性
+//-------------依視窗大小，調換Navbar和banner-----------
+//$(window).resize(function () {
+//    changeNav();
+//});
 
-function changeNav() {
+//function changeNav() {
 
-    //依視窗大小，調換Navbar
-    let w = $(window).width();
-    if (w < 992) {
-        $("#Navbar-lg").css("display", "none");
-        $("#Navbar-xs").css("display", "");
-    }
-    else {
-        $("#Navbar-lg").css("display", "");
-        $("#Navbar-xs").css("display", "none");
-    };
+//    //依視窗大小，調換Navbar
+//    let w = $(window).width();
+//    if (w < 992) {
+//        $("#Navbar-lg").css("display", "none");
+//        $("#Navbar-xs").css("display", "");
+//    }
+//    else {
+//        $("#Navbar-lg").css("display", "");
+//        $("#Navbar-xs").css("display", "none");
+//    };
 
-    //依視窗大小，調換banner
-    if (w < 768) {
-        $("#banner-lg").css("display", "none");
-        $("#banner-xs").css("display", "");
-    }
-    else {
-        $("#banner-lg").css("display", "");
-        $("#banner-xs").css("display", "none");
-    };
-};
+//    依視窗大小，調換banner
+//    if (w < 768) {
+//        $("#banner-lg").css("display", "none");
+//        $("#banner-xs").css("display", "");
+//    }
+//    else {
+//        $("#banner-lg").css("display", "");
+//        $("#banner-xs").css("display", "none");
+//    };
+//};
 
-changeNav();
-    
+//changeNav();
 //-------------依視窗大小，調換Navbar和banner End-----------
 
 //-------------頁面滾動超過banner，就隱藏Navbar-------------

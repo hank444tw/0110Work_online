@@ -1,4 +1,48 @@
-﻿.nk-header{
+﻿
+/*判斷要使用哪個Navbar*/
+@media screen and (max-width:992px){
+    #Navbar-lg{
+        display:none;
+    }
+    #Navbar-xs{
+        display:table;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #Navbar-lg {
+        display:table;
+    }
+
+    #Navbar-xs {
+        display: none;
+    }
+}
+/*判斷要使用哪個Navbar end*/
+
+/*判斷要使用哪個banner*/
+@media screen and (max-width:768px) {
+    #banner-lg {
+        display: none;
+    }
+
+    #banner-xs {
+        display: initial;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #banner-lg {
+        display: initial;
+    }
+
+    #banner-xs {
+        display: none;
+    }
+}
+/*判斷要使用哪個banner End*/
+
+.nk-header{
     position:absolute;
     left:0;
     right:0;
