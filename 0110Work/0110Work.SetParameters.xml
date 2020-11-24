@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site" />
+  <setParameter name="DB10861113Entities-Web.config Connection String" value="metadata=res://*/Models.ArticleModel.csdl|res://*/Models.ArticleModel.ssdl|res://*/Models.ArticleModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\DB10861113.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+</parameters>
