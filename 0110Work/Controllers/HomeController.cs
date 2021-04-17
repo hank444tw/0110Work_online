@@ -32,9 +32,10 @@ namespace _0110Work.Controllers
 
         public ActionResult BackArticleList()
         {
-            if(Session["admin"] == null)
+            if (Session["admin"] == null)
             {
-                return Content("<html><body><script>alert('請先進行登入');</script></body></html>");
+                TempData["checkAdmin"] = true;
+                return RedirectToAction("Index");
             }
             var result = db.Article.ToList().OrderByDescending(m => m.postDate);
             return View(result);
@@ -44,7 +45,8 @@ namespace _0110Work.Controllers
         {
             if (Session["admin"] == null)
             {
-                return Content("<html><body><script>alert('請先進行登入');</script></body></html>");
+                TempData["checkAdmin"] = true;
+                return RedirectToAction("Index");
             }
             ViewData["check"] = "";
             return View();
@@ -53,13 +55,9 @@ namespace _0110Work.Controllers
         //新增文章
         [HttpPost]
         //[ValidateInput(false)] //取消危險驗證，如程式語法，最好不要用
+        [ValidateAntiForgeryToken] //防止跨網站偽造請求的攻擊
         public ActionResult CreateArticle(HttpPostedFileBase file, Article article,string trueContent)
         {
-            if (Session["admin"] == null)
-            {
-                return Content("<html><body><script>alert('請先進行登入');</script></body></html>");
-            }
-
             //驗證
             if (file == null || file.ContentLength == 0 || article.title == null || trueContent.IndexOf("\r") != -1
                 || trueContent.IndexOf("\n") != -1 || trueContent.IndexOf("amp;") != -1
@@ -120,14 +118,11 @@ namespace _0110Work.Controllers
         {
             if (Session["admin"] == null)
             {
-                return Content("<html><body><script>alert('請先進行登入');</script></body></html>");
+                TempData["checkAdmin"] = true;
+                return RedirectToAction("Index");
             }
-            var result = db.Article.Where(m => m.aId == aId).FirstOrDefault();
 
-            if (aId == "24094681494f49c897c0754188d5fee5")
-            {
-                return Content("<html><body><script>alert('想對SOSO做甚麼 不允許!!');</script></body></html>");
-            }
+            var result = db.Article.Where(m => m.aId == aId).FirstOrDefault();
 
             ViewData["check"] = "";
             return View(result);
@@ -135,13 +130,9 @@ namespace _0110Work.Controllers
 
         //編輯文章
         [HttpPost]
+        [ValidateAntiForgeryToken] //防止跨網站偽造請求的攻擊
         public ActionResult EditArticle(HttpPostedFileBase file, Article article, string trueContent)
         {
-            if (Session["admin"] == null)
-            {
-                return Content("<html><body><script>alert('請先進行登入');</script></body></html>");
-            }
-
             //驗證
             if (article.title == null || trueContent.IndexOf("\r") != -1 || trueContent.IndexOf("\n") != -1
                 || trueContent.IndexOf("amp;") != -1 || trueContent.IndexOf("/Images/TemporaryImg/") != -1
@@ -268,7 +259,8 @@ namespace _0110Work.Controllers
         {
             if (Session["admin"] == null)
             {
-                return Content("<html><body><script>alert('請先進行登入');</script></body></html>");
+                TempData["checkAdmin"] = true;
+                return RedirectToAction("Index");
             }
 
             var item = db.Article.Where(m => m.aId == aId).FirstOrDefault();

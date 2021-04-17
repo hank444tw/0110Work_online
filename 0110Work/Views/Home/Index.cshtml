@@ -13,6 +13,14 @@
 @section js{
     <script src="~/Scripts/index.js"></script>
     <script src="~/FlexSlider/jquery.flexslider-min.js"></script>
+    @{ 
+        if(TempData["checkAdmin"] != null)
+        {
+            <script>
+                alert("請先進行登入");
+            </script>
+        }
+    }
 }
 
 <div id="bigimg">

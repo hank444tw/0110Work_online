@@ -18,7 +18,8 @@ namespace _0110Work
             bundles.Add(new ScriptBundle("~/bundles/Js").Include(
                       "~/Scripts/jquery-3.4.1.min.js",
                       "~/Scripts/bootstrap.min.js",
-                      "~/Scripts/modernizr-2.8.3.js"));
+                      "~/Scripts/modernizr-2.8.3.js",
+                      "~/Scripts/jquery.validate.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/Sidebar").Include(
                       "~/Scripts/Sidebar.js"));
